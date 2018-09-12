@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" media="screen">
+    <link rel="stylesheet" href="css/font-awesome.min.css" >
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.2/jquery-ui.min.css"  />
+    <link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/estilo-admin.css?v="  />
+    <!--<script language="JavaScript" src="js/jquery-1.4.4.min.js" type="text/javascript"></script>-->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script language="JavaScript" src="js/jquery-ui-1.11.2/jquery-ui.min.js" type="text/javascript"></script>
+    <script language="JavaScript" src="js/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <!--  <script language="JavaScript" src="js/jquery.limit-1.2.js" type="text/javascript"></script>-->
+    <script language="JavaScript" src="js/jquery.ui.datepicker-pt-BR.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <script language="JavaScript" src="js/java-script-geral.js?v=" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="site">
+      <div id="topo">
+        <div class="conteudo">
+          <div class="left">
+            <div id="logo">
+              <h1>Admin</h1>
+            </div>
+          </div>
+          <div class="right">
+            <div class="boxuser">
+              Ol&aacute; <strong>Fernando Valler</strong> | <a href=".." target="_blank">Ver site</a> | <a href="ad-sair.php">Sair</a><br />
+              <small>Ultimo acesso: 9:43 16.07.2018<br />Teresina(PI)</small>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div id="navbar">
+        <div class="conteudo">
+          <ul id="navmenu-h">
+            <!-- MENU PARA USUARIOS ADMINISTRATIVOS -->
+            <li><a href="?p=home" class="select" >Início</a></li>
+            <!-- Relatorio -->
+            <li><a href="#"  >Relatorios</a>
+            <ul>
+              <li><a href="?p=relatorios"  >WEB &raquo;</a>
+              <ul>
+                <li><a href="?p=relatorios"  >Filtros</a></li>
+                <li><a href="?p=vendas"  >Vendas</a>
+                <ul>
+                  <li><a href="?p=vendas-pagseguro"  >Vendas PagSeguro</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <!-- End Relatorio -->
+    </ul>
+  </div>
+  </div><!-- /navbar -->
+  <script src="js/ajax.js"></script>
+  <script>
+  function lembrete(valor){
+    //FUNÇÃO QUE MONTA A URL E CHAMA A FUNÇÃO AJAX
+    url="lembretes.php?status_lembrete="+valor;
+    ajax(url);
+  }
+  </script>
+  <div id="paginas">
+    <div class="conteudo">
+      <div class="pag-topo">
+        <h2>home</h2>
+        </div><!-- /pag-topo -->
+        <div class="pag-corpo">
+          <div id="lembretes" style="display:block; overflow:hidden;">
+            <div id="resultado-busca">
+            </div>
+          </div>
+          
+          
+          <div class="comandos">
+            <div class="left">
+              <a href="javascript:void(0);" onclick="ajax_get('widgets.php', '', '#widgets');">Widgets</a>
+              <a href="javascript:void(0);" onclick="ajax_get('widgets-graficos.php', '', '#widgets');">Graficos</a>
+              <a href="javascript:void(0);" onclick="ajax_get('widgets-notificacoes.php', '', '#widgets')" >Notificações</a>
+            </div>
+            <div class="right"></div>
+            <div class="clear"></div>
+          </div>
+          <script language="JavaScript" type="text/javascript">
+          ajax_get('widgets.php', '', '#widgets');
+          </script>
+          <p style="text-align: center"><span id="load"></span></p>
+          <div id="widgets"></div>
+          </div><!-- /pag-corpo -->
+          </div><!-- /conteudo -->
+          </div> <!-- /paginas -->
+          </div><!-- /site -->
+          <div id="rodape">
+            <div class="conteudo">
+              <p align="center">&copy; Copyright 2018 - Admin</p>
+            </div>
+          </div>
+          
+          
+        </body>
+      </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="css/estilo-admin.css" type="text/css" />
+    <link rel="stylesheet" href="css/estilo-unibuttons.css" type="text/css" />
+    <!-- Adding support for transparent PNGs in IE6: -->
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/ddpng.js"></script>
+    <script type="text/javascript">
+      DD_belatedPNG.fix('h1');
+      DD_belatedPNG.fix('.png');
+    </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="site">
+      <div id="login">
+        <div class="login-top">
+          <h1>Painel Administrativo</h1>
+        </div>
+        <form action="login-action.php" method="post" >
+          <p>
+            <label>Usu&aacute;rio</label>
+            <input type="text" class="campos usuario" name="usuario" maxlength="20" />
+          </p>
+          <p>
+            <label>Senha</label>
+            <input type="password" class="campos psw" name="senha" maxlength="20"/>
+          </p>
+          <div class="left links"><p><a href="#">Esqueceu sua senha</a> </p></div>
+          <div class="right"><p align="right"><input type="submit" value="Entrar" class="button blue" /></p></div>
+          
+          <div class="clear"></div>
+        </form>
+        </div><!-- /login -->
+        </div><!-- /site -->
+      </body>
+    </html>
